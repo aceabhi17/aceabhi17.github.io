@@ -30,8 +30,8 @@
 		<a href="http://threejs.org" target="_blank">three.js</a> - OBJLoader test
 		</div>
 
-		<script src="js/three.js"></script>
-		<script src="js/OBJLoader.js"></script>
+		<script src="three.js"></script>
+		<script src="OBJLoader.js"></script>
 
 		<script>
 			var container;
@@ -74,7 +74,7 @@
 				} );
 				// model
 				var loader = new THREE.OBJLoader( manager );
-				loader.load( 'obj/bb.obj', function ( object ) {
+				loader.load( 'bb.obj', function ( object ) {
 					object.traverse( function ( child ) {
 						if ( child instanceof THREE.Mesh ) {
 							child.material.map = texture;
@@ -87,7 +87,7 @@
 
 				//model 2
 				var loader1 = new THREE.OBJLoader( manager );
-				loader.load( 'obj/cb.obj', function ( object ) {
+				loader.load( 'cb.obj', function ( object ) {
 					object.traverse( function ( child ) {
 						if ( child instanceof THREE.Mesh ) {
 							child.material.map = texture;
